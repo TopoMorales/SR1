@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://bop2tpa4c7iva"]
+
+[ext_resource type="Texture2D" uid="uid://b02u73wkld4vu" path="res://background/stars_texture.png" id="1_ugo4p"]
+[ext_resource type="Texture2D" uid="uid://bg5lbld4sjyt1" path="res://background/galaxy.png" id="2_v0aqb"]
+[ext_resource type="Texture2D" uid="uid://jvidriweb24o" path="res://background/station.png" id="3_axj2b"]
+[ext_resource type="PackedScene" uid="uid://st23kqmh53js" path="res://scene/le_chip.tscn" id="4_lfehf"]
+
+[node name="TehSpace" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxStars" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStars"]
+position = Vector2(92, 25)
+texture = ExtResource("1_ugo4p")
+
+[node name="ParallaxGalaxy" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxGalaxy"]
+position = Vector2(952, 1315)
+texture = ExtResource("2_v0aqb")
+
+[node name="ParallaxStation2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStation2"]
+position = Vector2(234, 187)
+texture = ExtResource("3_axj2b")
+
+[node name="ParallaxStation" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStation"]
+position = Vector2(-196, -228)
+texture = ExtResource("3_axj2b")
+
+[node name="ParallaxStation3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStation3"]
+position = Vector2(-825, 923)
+texture = ExtResource("3_axj2b")
+
+[node name="ParallaxStation4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStation4"]
+position = Vector2(-793, -846)
+texture = ExtResource("3_axj2b")
+
+[node name="ParallaxStation5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStation5"]
+position = Vector2(935, 855)
+texture = ExtResource("3_axj2b")
+
+[node name="ParallaxStation6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxStation6"]
+position = Vector2(987, -849)
+texture = ExtResource("3_axj2b")
+
+[node name="LeChip" parent="." instance=ExtResource("4_lfehf")]
+position = Vector2(-4, -6)
+motion_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="LeChip"]
+limit_smoothed = true
